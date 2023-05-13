@@ -31,7 +31,7 @@ const operation=(event)=>{
     let operands = event.target.value;
     let operatingValue = num1 + operands +num2
     let result =eval(operatingValue)
-    setAns(result)
+    setAns(result);
    }
 }
 

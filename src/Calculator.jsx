@@ -8,6 +8,7 @@ const [ans,setAns] = useState('')
 const [error,setError] = useState('')
 
 const validInputs=()=>{
+    setError('')
     if (num1 === "") {
         setError('Error :  Num1 cannot be empty');
         return false
@@ -50,15 +51,11 @@ const operation=(event)=>{
     </div>
     <div>
         {error && <div style={{ color: 'red' }}>{error}</div>}
-        {ans &&
-                    <>
-                        <div >{ans}</div>
-                        <div style={{ color: 'green' }}>Success : Your result is shown above!</div>
-                    </>
+        {ans && <>  <div >{ans}</div>
+                    <div style={{ color: 'green' }}>Success : Your result is shown above!</div>
+                </>
                 }
-        {/* {ans? <p>successfull</p>:<p>Error</p>} */}
-        
-        {/* <p>{error}</p>  */}
+    
         <div>
         </div>
     </div>
